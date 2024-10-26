@@ -1,4 +1,6 @@
-fn main() {
-    println!("Hello, world!");
-    println!("{}", 1 + 1);
+mod presentation;
+mod application;
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    presentation::run_server().await
 }
